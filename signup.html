@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 800px;
+           background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(https://www.sreedattha.ac.in/photogallery/small/bimg161137c7bcaa3a.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+        }
+        .s{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .s i{
+            position: absolute;
+            inset: 0px;
+            border: 2px solid white;
+            transition: 0.5s;
+        }
+        .s i:nth-child(1){
+            border-radius:38% 62% 63% 37%;
+            animation: move 6s linear infinite;
+        }
+        .s i:nth-child(2){
+            border-radius:41% 44% 56% 59%;
+            animation: move 4s linear infinite;
+        }
+        .s i:nth-child(3){
+            border-radius:38% 62% 63% 37%;
+            animation: move1 10s linear infinite;
+        }
+        .s:hover i{
+            border: 6px solid var(--clr);
+            filter: drop-shadow( var(--clr));
+        }
+        @keyframes move {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes move1 {
+            0%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+        .login-b{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .login-b h2{
+            color: white;
+            font-size: 30px;
+        }
+        .login .input-b input{
+            position: relative;
+            width: 100%;
+            padding: 12px 20px;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            box-shadow: none;
+            outline: none;
+        }
+        .input .input-b input[type="submit"]
+        {
+              width: 100%;
+              background: hsl(212, 100%, 50%);
+              background-image: linear-gradient(45deg #ff357a,#fff172);
+              border: none;
+              cursor: pointer;
+        }
+        .login .input-b input::placeholder{
+            color: rgba(255, 255, 255, 0.75);
+        }
+        .links a{
+            color: white;
+            text-decoration: none;
+        }
+        .links .li{
+            color: yellow;
+            text-decoration: none;
+        }
+        button{
+            width: 130px;
+            height: 30px;
+            border-radius: 10px;
+            background-image: linear-gradient(orange, rgba(182, 102, 144, 0.792), rgb(94, 94, 225));
+        }
+        button:hover{
+            background-image: linear-gradient( 90deg,orange,white,green);
+            /* transition: 3s;
+            font-size: 20px;
+            color: blue; */
+        }
+    </style>
+</head>
+<body>
+   <div class="s">
+    <i style="--clr:red;"></i>
+    <i style="--clr:green;"></i>
+    <i style="--clr:yellow;"></i>
+    <div class="login-b">
+        <h2>Sign Up</h2>
+    <div class="inputb">
+        <input type="email" placeholder="Email">
+    </div>
+    <div class="inputb">
+        <input type="number" placeholder="Phone number">
+    </div>
+    <div class="input-b">
+        <input type="password" placeholder="Passward">
+    </div>
+    <div class="input-b">
+        <input type="password" placeholder="Conform Passward">
+    </div>
+    <div class="input-b">
+        <a href="loginpage.html"><button>Create Account</button></a>
+    </div>
+    <div class="links">
+       <a href="#" class="li">Already Have Account?</a><br>
+       <center><a href="loginpage.html">Login</a></center>
+    </div>
+    </div>
+</div>
+</body>
+</html>
